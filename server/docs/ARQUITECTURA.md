@@ -24,11 +24,23 @@ Tres programas independientes que comparten el **formato de campaña** (carpetas
 campanas/<nombre>/   config.yaml, sonidos.yaml, campana.yaml (uid y orden de las listas), maps/, abilities/, items/, enemies/, shops/, groups/,
                      options/, traits/, states/, tiles/, journal/ y base/ (imágenes y sonidos)
 data/<nombre>/       partida guardada (estado, jugadores)
-server/              servidor Python (mesa/recursos.py, efectos.py, estado.py, servidor.py…)
+server/              servidor Python (mesa/): ver «Código del servidor» abajo
 ../client/           cliente Electron (fuera de server/)
 editor/              Editor del servidor (Electron)
 docs/                ESQUEMA.md, PROTOCOLO.md, DECISIONES.md, este archivo
 ```
+
+## Código del servidor (`server/mesa/`, un tema por archivo)
+- **Partida** — `estado.py` define `EstadoPartida`, que reúne partes que comparten `self`: `salas.py`, `tablero.py`, `niebla.py`,
+  `dibujos.py`, `personajes.py`, `tokens.py`, `progresion.py`, `habilidades.py`, `objetos.py`, `combate.py`, `chat.py`, `ambiente.py`,
+  `diario.py`, `vistas.py`, `persistencia.py`, `comercio.py` y `motor.py` (efectos). Guarda a través de un `Almacen` (`almacen.py`):
+  YAML en `data/` por defecto, en memoria para las pruebas.
+- **Red** — `servidor.py` (conexión, entrada, envíos y difusión por salas) y los manejadores por tema en `acciones_*.py`. Cada uno se
+  registra con `@accion("tipo")` (`protocolo.py`): una acción nueva no obliga a tocar ninguna lista.
+- **Campaña** — `recursos.py` (catálogo y carga de cada tipo de recurso), `config_campana.py` (config.yaml y sus valores por defecto),
+  `validacion.py` (informe y validador de campos), `efectos.py` (catálogo de efectos y condiciones) y `formulas.py`.
+- `tests/test_arquitectura.py` vigila que las partes no se pisen nombres, que todas las acciones del protocolo tengan manejador y que cada
+  tipo de habilidad tenga su impacto.
 
 ## Salas (varios mapas a la vez)
 Cada mapa es una sala con sus propios tokens, combate, dibujos, capas ocultas y niebla (`EstadoPartida.salas[mapa]`). Las reglas siguen

@@ -113,6 +113,10 @@ class Cuentas:
         """False = este jugador tiene la edición bloqueada: no puede crear ni cambiar fichas (sí jugar con ellas)."""
         return self.datos.get(usuario, {}).get("editar", True)
 
+    def permite(self, usuario: str, clave: str) -> bool:
+        """Los bloqueos individuales que el propietario pone a una cuenta: «ver_ajenos» o «editar» (fichas)."""
+        return self.puede_ver_ajenos(usuario) if clave == "ver_ajenos" else self.puede_editar(usuario)
+
     def tiene_password(self, usuario: str) -> bool:
         return bool(self.datos.get(usuario, {}).get("hash"))
 

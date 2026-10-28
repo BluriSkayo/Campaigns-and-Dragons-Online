@@ -2,7 +2,7 @@
 import { h } from '../util.js';
 import { S, textoMedida } from '../almacen.js';
 import { abrirVentana, cerrarVentana } from '../ventanas.js';
-import { celdasArea } from '../mapa.js';
+import { celdasArea } from '../mapa-area.js';
 import { urlLocal } from '../archivos.js';
 import { iniciarHabilidad, resumenHabilidad } from '../acciones.js';
 

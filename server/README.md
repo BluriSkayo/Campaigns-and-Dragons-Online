@@ -66,6 +66,13 @@ Si el servicio ofrece su propio certificado, indícalo en `servidor.certificado`
 python -m pytest
 ```
 
+Antes y después de reorganizar código (solo desarrollo, ver la cabecera de cada archivo):
+
+```bash
+python tools/oraculo.py . antes.txt 1 5000            # miles de acciones al azar con semilla fija: la salida debe quedar idéntica
+PYTHONHASHSEED=0 python tools/banco.py . 3000         # carga con 8 jugadores y niebla: acciones/s y hash de lo enviado
+```
+
 ## Decisiones de diseño
 
 - **El servidor es la autoridad.** Valida permisos, turnos, alcance, costes y calcula daños. El cliente solo pide acciones.

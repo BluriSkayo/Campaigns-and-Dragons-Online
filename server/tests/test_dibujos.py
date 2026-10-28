@@ -97,8 +97,8 @@ async def test_borrador_por_la_red(mundo):
 
 
 def test_borrador_respeta_el_tope_sin_anunciar_trazos_perdidos(tmp_path, catalogo):
-    from mesa import estado as mod
-    e = mod.EstadoPartida(catalogo, tmp_path, persistir=False)
+    from mesa import dibujos as mod
+    e = EstadoPartida(catalogo, tmp_path, persistir=False)
     zigzag = [[x * 0.5, 1 if x % 2 else 0] for x in range(40)]
     for _ in range(mod.MAX_TRAZOS):
         e.anadir_dibujo("GM", True, None, zigzag)

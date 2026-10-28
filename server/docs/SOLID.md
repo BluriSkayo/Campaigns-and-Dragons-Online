@@ -41,5 +41,19 @@ Orden de abajo: de más barato y más útil a más grande. Hecho hasta ahora: la
 - **Arreglo:** inyectar un `Almacen` con `guardar(nombre, datos)` y `cargar(nombre)`: `AlmacenYaml` por defecto y `AlmacenVacio` para pruebas.
   Las 35 llamadas no cambian; solo se reemplaza `_volcar`.
 
+## Hecho el 28-oct-2026 (sin cambiar el comportamiento)
+Verificado con las 518 pruebas de Python (ahora 523), las pruebas de extremo a extremo del cliente (322) y del Editor (274), las de Node,
+un «oráculo» (miles de acciones al azar con semilla fija contra la partida: salida idéntica byte a byte antes y después) y un banco de carga del
+servidor (8 jugadores + GM, niebla, 30 NPC: mismos mensajes enviados, comparados por hash).
+- **S:** `estado.py` (3.245 líneas) repartido en 15 archivos por tema (sección 1); `Servidor` (1.499) en `servidor.py` + 6 `acciones_*.py`;
+  `recursos.py` (1.958) en `recursos.py` + `config_campana.py` + `validacion.py`; en el cliente, `mapa.js` (1.141) en `mapa.js` + capas,
+  tokens, trazos, estilo y área. `usar_habilidad` (242 líneas) va por etapas (comprobar → apuntar → objetivos → coste → desvío → tirar →
+  aplicar → contar) y `editar_token` valida campo a campo en métodos propios.
+- **O:** las acciones del servidor se registran solas con `@accion("tipo")`; el impacto de cada tipo de habilidad está en la tabla `IMPACTOS`.
+- **D:** la partida guarda en un `Almacen` inyectable (`AlmacenYaml`, `AlmacenMemoria`); el permiso por cuenta es `Cuentas.permite`.
+- **Rendimiento:** con niebla, la visión de cada jugador se calcula una vez por difusión (`EstadoPartida.lectura()`) y los campos de visión se
+  recuerdan por casilla y radio: de ~160 a ~1.200 acciones por segundo con niebla compartida (×8); ×3 con niebla individual.
+- Pendiente: `principal.js` (cliente, una sola función de ~600 líneas) y `api.js` del Editor (1.091); la sección 4 (I) sigue igual.
+
 ## Qué haría primero
-La 3 y la 2 ya están. Lo siguiente sería sacar `dibujos.py` (sección 1). Las demás cuando duelan.
+La 1, 2, 3 y 5 ya están. Lo siguiente: `principal.js` y la sección 4, cuando duelan.
