@@ -1,0 +1,7 @@
+node_modules/
+release/
+__pycache__/
+.pytest_cache/
+server/editor/python/
+server/editor/tools/.cache/
+server/data/

@@ -1,0 +1,10 @@
+nombre: Guerrero
+descripcion: Combatiente resistente que vive en primera línea.
+# imagen: tokens/guerrero.png      (ruta dentro de assets/)
+recursos:
+  HP: 140
+  MP: 20
+habilidades: [ataque_basico]
+inventario:
+  - { objeto: pocion, cantidad: 2 }
+elecciones: {raza: humano, clase: guerrero}

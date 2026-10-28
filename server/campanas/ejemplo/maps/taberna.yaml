@@ -1,0 +1,19 @@
+nombre: Taberna
+descripcion: Interior de la taberna de la aldea. Sirve para probar varias salas a la vez.
+ancho: 12
+alto: 8
+tamano_tile: 64
+
+tile_base: hierba
+
+casillas:
+  muro: [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0], [11, 0], [0, 7], [1, 7], [2, 7], [3, 7], [4, 7], [5, 7], [7, 7], [8, 7], [9, 7], [10, 7], [11, 7], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6], [11, 1], [11, 2], [11, 3], [11, 4], [11, 5], [11, 6]]
+
+inicio: { x: 6, y: 5 }
+
+objetos:
+  - { nombre: Mostrador, x: 2, y: 2, ancho: 4, bloquea: true }
+  - { nombre: Barril, x: 9, y: 2, bloquea: true }
+
+puntos:
+  - { nombre: Puerta, x: 6, y: 7 }

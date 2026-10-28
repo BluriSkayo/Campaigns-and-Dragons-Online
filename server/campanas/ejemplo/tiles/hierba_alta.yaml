@@ -1,0 +1,5 @@
+nombre: Hierba alta
+descripcion: Quien se agacha aquí no se ve desde fuera (solo lo ve el GM y su dueño).
+color: "#2f6a28"
+transitable: true
+esconde: true

@@ -1,0 +1,5 @@
+grupo: raza
+nombre: Elfo
+descripcion: Ágiles y de sentidos finos.
+bonos: { Agilidad: 2, Resistencia: -1 }
+rasgos: [vista_aguda, vision_nocturna]

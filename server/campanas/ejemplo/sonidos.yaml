@@ -1,0 +1,13 @@
+# Listas de sonidos de la campaña. Aquí solo van los NOMBRES de archivo;
+# los archivos están en el cliente (base/sonido/musica, ambiente y efectos).
+musica:
+  - categoria: Pueblo
+    archivos: [taberna.wav]
+  - categoria: Combate
+    archivos: [batalla.ogg]      # a propósito no está en el cliente de ejemplo: sale en rojo
+ambiente:
+  - categoria: Clima
+    archivos: [lluvia.wav]
+efectos:
+  - categoria: Combate
+    archivos: [espada.wav]

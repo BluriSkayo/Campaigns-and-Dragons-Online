@@ -1,0 +1,48 @@
+{
+  "name": "mesa-rol-cliente",
+  "version": "0.2.0",
+  "description": "Cliente de Campaigns and Dragons Online",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "portable": "electron-builder --win portable --x64"
+  },
+  "build": {
+    "appId": "com.mesarol.cliente",
+    "productName": "Campaigns and Dragons Online",
+    "directories": {
+      "output": "../release"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icono.ico"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "archivos.js",
+      "archivos-logica.js",
+      "zip-lector.js",
+      "zip.js",
+      "tls-cliente.js",
+      "credenciales.js",
+      "src/**/*"
+    ],
+    "portable": {
+      "artifactName": "Campaigns-and-Dragons-Online-${version}.exe",
+      "unpackDirName": "campaigns-and-dragons-online"
+    },
+    "copyright": "Creado por BluriSkayo"
+  },
+  "devDependencies": {
+    "electron": "45.0.0",
+    "electron-builder": "26.17.0"
+  }
+}

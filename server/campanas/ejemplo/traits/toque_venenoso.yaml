@@ -1,0 +1,5 @@
+nombre: Toque venenoso
+descripcion: Al atacar, envenena al objetivo.
+efectos:
+  - cuando: { tipo: al_atacar }
+    hacer: { tipo: aplicar_estado, estado: veneno, objetivo: objetivo }

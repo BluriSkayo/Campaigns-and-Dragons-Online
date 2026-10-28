@@ -1,0 +1,73 @@
+{
+  "name": "mesa-rol-editor",
+  "version": "0.2.0",
+  "description": "Editor del Servidor de Campaigns and Dragons Online",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "portable": "node tools/preparar-python.js && electron-builder --win portable --x64"
+  },
+  "dependencies": {
+    "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "electron": "45.0.0",
+    "electron-builder": "26.17.0"
+  },
+  "build": {
+    "appId": "com.mesarol.editor",
+    "productName": "Editor del Servidor",
+    "copyright": "Creado por BluriSkayo",
+    "directories": {
+      "output": "../../release"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "api.js",
+      "servidor.js",
+      "jugadores.js",
+      "nombres.js",
+      "paquete.js",
+      "zip.js",
+      "zip-lector.js",
+      "src/**/*",
+      "predeterminados/**/*"
+    ],
+    "asarUnpack": [
+      "predeterminados/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "python",
+        "to": "python"
+      },
+      {
+        "from": "..",
+        "to": "servidor",
+        "filter": [
+          "main.py",
+          "requirements.txt",
+          "mesa/*.py",
+          "recursos/**/*",
+          "campanas/ejemplo/**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icono.ico"
+    },
+    "portable": {
+      "artifactName": "Campaigns-and-Dragons-Editor-${version}.exe",
+      "unpackDirName": "campaigns-and-dragons-editor"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+nombre: Barricada
+descripcion: Tablones clavados a toda prisa. Se pueden romper a golpes.
+color: "#8a6a3c"
+transitable: false
+rompible:
+  golpes: 3
+  se_convierte_en: hierba

@@ -1,0 +1,8 @@
+nombre: Golpe furioso
+descripcion: Un golpe brutal que consume Furia.
+tipo: dano
+objetivo: enemigo
+alcance: 1
+coste: { Furia: 10 }
+formula: "[a.Fuerza] * 2 + 1d6 - [o.Resistencia] / 2"
+imagen: icons/habilidades/fuerzaroja.png

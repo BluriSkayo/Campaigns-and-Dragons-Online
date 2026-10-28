@@ -1,0 +1,8 @@
+nombre: Poción
+descripcion: Restaura 40 puntos de vida.
+tipo: consumible      # consumible | equipo | misc
+precio: 25
+efecto:
+  tipo: restaurar
+  recurso: HP
+  valor: 40

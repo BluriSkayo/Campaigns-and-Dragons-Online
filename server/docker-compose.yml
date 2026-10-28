@@ -1,0 +1,14 @@
+# Uso:  docker compose up -d --build
+# Cambia MESA_CAMPANA por el nombre de tu carpeta dentro de campanas/.
+services:
+  mesa-de-rol:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "8765:8765"
+    environment:
+      MESA_CAMPANA: ejemplo
+      # MESA_PASSWORD_GM: "pega-aquí-el-hash"        # python main.py --generar-hash
+      # MESA_PASSWORD_SERVIDOR: "pega-aquí-el-hash"
+    volumes:
+      - ./data:/app/data

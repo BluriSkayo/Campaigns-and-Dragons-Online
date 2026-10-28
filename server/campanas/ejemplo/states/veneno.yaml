@@ -1,0 +1,6 @@
+nombre: Veneno
+descripcion: Pierde vida al empezar cada turno.
+duracion: 4
+efectos:
+  - cuando: { tipo: inicio_turno }
+    hacer: { tipo: modificar_recurso, recurso: HP, formula: "-3" }

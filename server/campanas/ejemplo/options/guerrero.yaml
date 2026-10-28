@@ -1,0 +1,4 @@
+grupo: clase
+nombre: Guerrero
+bonos: { Fuerza: 1, Resistencia: 1 }
+habilidades: [ataque_basico]

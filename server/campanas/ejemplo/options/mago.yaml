@@ -1,0 +1,4 @@
+grupo: clase
+nombre: Mago
+bonos: { "Poder Mágico": 2 }
+habilidades: [bola_de_fuego, curacion]

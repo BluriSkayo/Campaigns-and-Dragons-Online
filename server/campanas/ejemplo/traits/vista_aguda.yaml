@@ -1,0 +1,5 @@
+nombre: Vista aguda
+descripcion: Percibe lo que otros no ven.
+efectos:
+  - cuando: { tipo: tirada, estadistica: Agilidad }
+    hacer: { tipo: bono_tirada, valor: 1 }

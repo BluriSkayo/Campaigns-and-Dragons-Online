@@ -1,0 +1,5 @@
+grupo: raza
+nombre: Orco
+descripcion: Fuertes y duros. Sus colmillos están envenenados.
+bonos: { Fuerza: 2, "Poder Mágico": -1 }
+rasgos: [fuerza_bruta, toque_venenoso]

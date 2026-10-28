@@ -1,0 +1,9 @@
+nombre: Curación
+descripcion: Restaura vida a un aliado cercano.
+tipo: curacion
+objetivo: aliado
+alcance: 3
+coste:
+  MP: 8
+formula: "[a.Poder Mágico] * 2 + 1d8"
+imagen: icons/habilidades/curacion.png

@@ -1,0 +1,30 @@
+nombre: Aldea
+descripcion: Mapa de prueba con un estanque y un muro con puerta.
+ancho: 20
+alto: 12
+tamano_tile: 64
+# fondo: maps/aldea.png            (imagen opcional, en la carpeta base/maps del cliente)
+
+tile_base: hierba                   # lo que hay donde no se pinta nada
+
+casillas:                           # tile → lista de casillas [columna, fila]
+  muro: [[0, 0], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0], [11, 0], [12, 0], [13, 0], [14, 0], [15, 0], [16, 0], [17, 0], [18, 0], [19, 0], [0, 1], [19, 1], [0, 2], [5, 2], [19, 2], [0, 3], [5, 3], [19, 3], [0, 4], [5, 4], [19, 4], [0, 5], [5, 5], [19, 5], [0, 6], [19, 6], [0, 7], [5, 7], [19, 7], [0, 8], [5, 8], [19, 8], [0, 9], [5, 9], [19, 9], [0, 10], [19, 10], [0, 11], [1, 11], [2, 11], [3, 11], [4, 11], [5, 11], [6, 11], [7, 11], [8, 11], [9, 11], [10, 11], [11, 11], [12, 11], [13, 11], [14, 11], [15, 11], [16, 11], [17, 11], [18, 11], [19, 11]]
+  agua: [[8, 4], [9, 4], [10, 4], [11, 4], [8, 5], [9, 5], [10, 5], [11, 5], [8, 6], [9, 6], [10, 6], [11, 6], [8, 7], [9, 7], [10, 7], [11, 7]]
+  hierba_alta: [[14, 2], [15, 2], [14, 3], [15, 3], [16, 3], [15, 4]]
+  brasas: [[12, 9], [13, 9]]
+  barricada: [[5, 6]]
+
+inicio: { x: 2, y: 5 }
+
+objetos:
+  - { nombre: Barril, x: 3, y: 2, bloquea: true }
+
+puntos:
+  - { nombre: Puerta del muro, x: 5, y: 6 }
+  - { nombre: Estanque, x: 9, y: 5 }
+
+capas:                              # detalles decorativos (no bloquean ni dañan)
+  detalle:                          # va debajo de los tokens
+    hierba_alta: [[2, 8], [3, 8], [3, 9]]
+  superior:                         # va encima de los tokens (techos, copas de árboles)
+    hierba_alta: [[16, 8], [17, 8]]

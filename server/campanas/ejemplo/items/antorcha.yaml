@@ -1,0 +1,6 @@
+nombre: Antorcha
+descripcion: "Ilumina a su portador: ve 2 casillas más lejos mientras la lleve."
+tipo: equipo
+precio: 5
+efectos:
+  - { cuando: siempre, hacer: { tipo: bono_vision, valor: 2 } }

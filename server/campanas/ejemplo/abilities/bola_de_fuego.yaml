@@ -1,0 +1,9 @@
+nombre: Bola de Fuego
+descripcion: Lanza una esfera de fuego que ignora la armadura pero no la defensa mágica.
+tipo: dano
+objetivo: enemigo
+alcance: 5
+coste:
+  MP: 10
+formula: "[[a.Poder Mágico] * 2] - [o.Defensa Mágica] + 2d4"
+imagen: icons/habilidades/boladefuego.png

@@ -1,0 +1,4 @@
+nombre: Hierba
+descripcion: Terreno despejado. Se puede caminar sin problema.
+color: "#4f8a3c"
+transitable: true

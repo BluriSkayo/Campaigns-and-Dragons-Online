@@ -1,0 +1,13 @@
+nombre: Tabernero
+descripcion: Sirve cerveza y no quiere problemas.
+stats:
+  Fuerza: 8
+  Resistencia: 8
+  Poder Mágico: 2
+  Defensa Mágica: 2
+  Agilidad: 6
+recursos:
+  HP: 40
+  MP: 0
+habilidades: []
+bando: neutral

@@ -1,0 +1,5 @@
+nombre: Muro
+descripcion: Piedra maciza. Nadie puede atravesarla.
+color: "#555555"
+transitable: false
+bloquea_vision: true

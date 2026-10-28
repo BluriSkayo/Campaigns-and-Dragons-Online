@@ -1,0 +1,7 @@
+nombre: Ataque básico
+descripcion: Golpe cuerpo a cuerpo.
+tipo: dano            # dano | curacion
+objetivo: enemigo     # enemigo | aliado | cualquiera | uno_mismo
+alcance: 1            # en casillas
+formula: "[a.Fuerza] + 1d6 - [o.Resistencia] / 2"
+imagen: icons/habilidades/filo.png

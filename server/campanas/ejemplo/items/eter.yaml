@@ -1,0 +1,8 @@
+nombre: Éter
+descripcion: Restaura 20 puntos de magia.
+tipo: consumible
+precio: 40
+efecto:
+  tipo: restaurar
+  recurso: MP
+  valor: 20

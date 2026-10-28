@@ -1,0 +1,10 @@
+grupo: clase
+nombre: Berserker
+descripcion: Luchador salvaje. Empieza más fuerte y con Furia, pero es poco ágil.
+# Valores con los que EMPIEZA esta clase (sustituyen al valor inicial global; los bonos se suman aparte).
+estadisticas: { Fuerza: 14, Agilidad: 8 }
+# Recursos propios de la clase (Furia no existe para las demás clases).
+recursos: { Furia: 50 }
+# Puntos extra para repartir al crear el personaje, además de los de la campaña.
+puntos_extra: 3
+habilidades: [golpe_furioso]

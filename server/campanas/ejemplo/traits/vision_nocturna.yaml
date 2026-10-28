@@ -1,0 +1,7 @@
+nombre: Visión nocturna
+descripcion: De noche ve 2 casillas más lejos (con niebla de guerra).
+efectos:
+  - cuando: { tipo: siempre }
+    si:
+      - { tipo: momento_dia, periodo: Noche }
+    hacer: { tipo: bono_vision, valor: 2 }

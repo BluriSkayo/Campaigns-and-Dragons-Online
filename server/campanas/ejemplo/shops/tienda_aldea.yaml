@@ -1,0 +1,6 @@
+nombre: Tienda de la aldea
+descripcion: Suministros básicos para aventureros.
+recompra: 50                       # compra tus objetos al 50 % del precio
+articulos:
+  - { objeto: pocion, precio: 25, stock: 10 }
+  - { objeto: eter }                 # precio del objeto, stock ilimitado

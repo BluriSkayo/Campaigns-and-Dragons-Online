@@ -1,0 +1,5 @@
+nombre: Valla
+descripcion: Una valla baja en el lado norte de la casilla. Se puede estar encima, pero no cruzarla.
+color: '#7a9a4a'
+transitable: true
+bloquea_lados: [norte]

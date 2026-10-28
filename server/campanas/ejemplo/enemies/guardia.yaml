@@ -1,0 +1,13 @@
+nombre: Guardia del pueblo
+descripcion: Ayuda a los aventureros.
+stats:
+  Fuerza: 12
+  Resistencia: 12
+  Poder Mágico: 2
+  Defensa Mágica: 6
+  Agilidad: 8
+recursos:
+  HP: 70
+  MP: 0
+habilidades: [ataque_basico]
+bando: aliado

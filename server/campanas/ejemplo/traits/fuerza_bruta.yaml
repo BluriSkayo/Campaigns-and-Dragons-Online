@@ -1,0 +1,5 @@
+nombre: Fuerza bruta
+descripcion: +2 en las tiradas de Fuerza.
+efectos:
+  - cuando: { tipo: tirada, estadistica: Fuerza }
+    hacer: { tipo: bono_tirada, valor: 2 }

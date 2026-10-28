@@ -1,0 +1,10 @@
+nombre: Mago
+descripcion: Frágil, pero domina la magia ofensiva y curativa.
+recursos:
+  HP: 80
+  MP: 100
+habilidades: [ataque_basico, bola_de_fuego, curacion]
+inventario:
+  - { objeto: pocion, cantidad: 1 }
+  - { objeto: eter, cantidad: 2 }
+elecciones: {raza: elfo, clase: mago}

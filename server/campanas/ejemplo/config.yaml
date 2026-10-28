@@ -1,0 +1,61 @@
+# Configuración general del servidor.
+# (El Editor del Servidor modificará este archivo con controles gráficos.)
+
+servidor:
+  nombre: "Mesa de Prueba"
+  host: 0.0.0.0              # 0.0.0.0 = acepta conexiones de la red; localhost = solo este equipo
+  puerto: 8765               # puerto de la partida (WebSocket)
+  password_servidor: ""      # vacío = cualquiera puede entrar
+  password_gm: "cambia-esto" # con esta contraseña se entra como Game Master
+
+permisos:
+  romper_casillas: gm           # gm = solo el GM | todos = los jugadores también pueden golpear barricadas, puertas…
+  musica: gm                 # gm = solo el GM | todos = cualquiera controla la música
+  mover_tokens_ajenos: false
+  acciones_solo_en_su_turno: true   # durante un combate, solo actúa quien tiene el turno
+  crear_personajes: true
+  editar_stats_jugador: false   # ¿el jugador reparte sus puntos? (false = solo el GM)
+  max_personajes_por_jugador: 3
+
+juego:
+  # Estadísticas de todos los personajes y enemigos.
+  estadisticas:
+    - { nombre: Fuerza,         valor_inicial: 10, minimo: 0, maximo: 99 }
+    - { nombre: Resistencia,    valor_inicial: 10, minimo: 0, maximo: 99 }
+    - { nombre: Poder Mágico,   valor_inicial: 10, minimo: 0, maximo: 99 }
+    - { nombre: Defensa Mágica, valor_inicial: 10, minimo: 0, maximo: 99 }
+    - { nombre: Agilidad,       valor_inicial: 10, minimo: 0, maximo: 99 }
+  # Recursos que se gastan y se recuperan (vida, magia...).
+  recursos:
+    - { nombre: HP, descripcion: Puntos de vida,  maximo_inicial: 100 }
+    - { nombre: MP, descripcion: Puntos de magia, maximo_inicial: 50 }
+    # «para_todos: false» = solo lo tienen las clases/razas que lo concedan (ver options/berserker.yaml)
+    - { nombre: Furia, descripcion: Se acumula al pelear, maximo_inicial: 0, para_todos: false }
+  recurso_vida: HP                    # al llegar a 0, el personaje queda derrotado
+  puntos_a_repartir: 5          # puntos de estadística al crear un personaje
+  estadistica_iniciativa: Agilidad    # orden de turnos: d20 + esta estadística
+  mapa_inicial: aldea
+  max_mensajes_chat: 100
+  # Dinero: se guarda en la pieza más pequeña (aquí el cobre) y se muestra en piezas.
+  moneda:
+    activa: true
+    nombre: Monedas
+    simbolo: "🪙"
+    inicial: 150
+    denominaciones:
+      - { nombre: Oro,    valor: 100 }
+      - { nombre: Plata,  valor: 10 }
+      - { nombre: Cobre,  valor: 1 }
+  # Niebla de guerra: cada jugador solo ve lo que alcanza la visión de sus personajes (muros y objetos que bloquean la vista tapan lo de detrás).
+  # Más visión: efecto «Sumar casillas de visión» en rasgos, estados, objetos que se llevan encima o tiles (antorchas, visión nocturna…).
+  niebla:
+    activa: false
+    vision_base: 6
+    compartir: true            # los jugadores ven también lo que ven los demás
+  # Día y noche: el GM cambia el momento y el mapa se oscurece de noche.
+  ciclo:
+    activo: true
+    inicial: 0
+    periodos:
+      - { nombre: Día,   color: "", opacidad: 0 }
+      - { nombre: Noche, color: "#0a1233", opacidad: 0.5 }

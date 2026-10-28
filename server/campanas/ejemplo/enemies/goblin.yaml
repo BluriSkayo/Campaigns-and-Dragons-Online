@@ -1,0 +1,14 @@
+nombre: Goblin
+descripcion: Pequeño, rápido y mal educado.
+stats:
+  Fuerza: 9
+  Resistencia: 6
+  Poder Mágico: 2
+  Defensa Mágica: 4
+  Agilidad: 14
+recursos:
+  HP: 45
+  MP: 0
+habilidades: [ataque_basico]
+bando: enemigo
+sonidos: [espada.wav]      # efectos de la lista de «Sonidos» que el GM puede lanzar con este NPC

@@ -1,0 +1,12 @@
+nombre: Armas de la aldea
+seccion: Equipo
+visible: todos
+texto: |-
+  En la aldea se fabrican armas sencillas pero fiables.
+
+  # Cuerpo a cuerpo
+  - **Espada corta**: rápida y barata.
+  - **Hacha de leñador**: pesada, pega fuerte.
+
+  # A distancia
+  - **Arco de caza**: alcance largo, pero no atraviesa muros.
